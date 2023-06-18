@@ -15,7 +15,7 @@ interface CoffeProps {
 export default function Coffee({image, name, content, props1, props2, props3, isActive}: CoffeProps){
     const isActiveProps2 = props2 && props3;
     return (
-        <div className="bg-baseCard w-1/5 flex flex-col items-center gap-5 relative px-8 rounded-tl-md rounded-tr-[36px] rounded-br-md rounded-bl-[36px]">
+        <div className="bg-baseCard w-[19%] flex flex-col items-center gap-5 relative px-8 rounded-tl-md rounded-tr-[36px] rounded-br-md rounded-bl-[36px]">
             <div className="flex flex-col items-center gap-5">
                 <Image className="mt-[-1.5rem]" src={image} alt="Coffee" />
                 <div className="flex items-center gap-2">

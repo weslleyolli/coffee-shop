@@ -5,7 +5,7 @@ import introImage from '../assets/png/introImage.png'
 
 export default function Intro() {
     return (
-        <section className="h-[544px] mx-40 flex items-center justify-between">
+        <section className="h-[544px] flex items-center justify-between">
             <div>
                 <div className="flex flex-col gap-4">
                     <h1 className="text-5xl font-extrabold font-baloo text-baseTitle">Find the perfect coffee<br /> for any time of day.</h1>

@@ -19,14 +19,8 @@ import CoffeImage13 from '../assets/png/Coffee13.png'
 
 
 export default function Home() {
-  const customStyle = {
-    paddingTop: '4px',
-    paddingBottom: '4px',
-    paddingLeft: '12px',
-    paddingRight: '12px'
-  };
   return (
-    <div>
+    <div className="mx-40">
       <Header />
       <Intro />
       <div className="mx-40 mb-10 flex flex-col gap-14">

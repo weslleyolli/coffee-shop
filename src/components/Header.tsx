@@ -6,7 +6,7 @@ import logoCoffe from '../assets/svgs/logoCoffee.svg'
 
 export default function Header() {
     return (
-        <div className="my-8 mx-40 flex items-center justify-between">
+        <div className="p-8 flex items-center justify-between">
             <Image src={logoCoffe} alt="" />
             <div className="flex gap-3 ">
                 <button className="flex gap-1 bg-purplelight p-2 rounded-md text-purpledark">
