@@ -14,6 +14,8 @@ import CoffeImage8 from '../assets/png/Coffee8.png'
 import CoffeImage9 from '../assets/png/Coffee9.png'
 import CoffeImage10 from '../assets/png/Coffee10.png'
 import CoffeImage11 from '../assets/png/Coffee11.png'
+import CoffeImage12 from '../assets/png/Coffee12.png'
+import CoffeImage13 from '../assets/png/Coffee13.png'
 
 
 export default function Home() {
@@ -102,7 +104,7 @@ export default function Home() {
           <Coffee
             image={CoffeImage8}
             name={'Mocaccino'}
-            content={'Express coffee mixed with a little hot milk and foam'}
+            content={'Express coffee with chocolate sauce, a little milk and foam'}
             props1={'Traditional'}
             props2={'with milk'}
             props3={''}
@@ -110,32 +112,48 @@ export default function Home() {
           />
           <Coffee
             image={CoffeImage9}
-            name={'Macchiato'}
-            content={'Express coffee mixed with a little hot milk and foam'}
-            props1={'Traditional'}
+            name={'Hot chocolate'}
+            content={'Drink made with chocolate dissolved in hot milk and coffee'}
+            props1={'Special'}
             props2={'with milk'}
             props3={''}
             isActive={true}
           />
           <Coffee
             image={CoffeImage10}
-            name={'Cubano'}
-            content={'Express coffee mixed with a little hot milk and foam'}
-            props1={'Traditional'}
-            props2={'with milk'}
-            props3={''}
+            name={'Cuban'}
+            content={'Iced express drink with rum, cream and mint'}
+            props1={'Special'}
+            props2={'Alcoholic'}
+            props3={'Iced'}
             isActive={true}
           />
           <Coffee
             image={CoffeImage11}
-            name={'Macchiato'}
-            content={'Express coffee mixed with a little hot milk and foam'}
-            props1={'Traditional'}
-            props2={'with milk'}
+            name={'Hawaiian'}
+            content={'Sweet drink prepared with coffee and coconut milk'}
+            props1={'Special'}
+            props2={''}
+            props3={''}
+          />
+          <Coffee
+            image={CoffeImage12}
+            name={'Arabic'}
+            content={'Drink prepared with Arabic coffee beans and spices'}
+            props1={'Special'}
+            props2={''}
+            props3={''}
+          />
+          <Coffee
+            image={CoffeImage13}
+            name={'Irish'}
+            content={'Drink based on coffee, Irish whiskey, sugar and whipped cream'}
+            props1={'Special'}
+            props2={'Alcoholic'}
             props3={''}
             isActive={true}
           />
-          
+
         </div>
 
       </div>
