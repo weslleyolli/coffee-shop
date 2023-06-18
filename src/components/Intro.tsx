@@ -23,7 +23,7 @@ export default function Intro() {
                             <article className="h-8 w-8 flex items-center justify-center bg-yellowmedium rounded-full">
                                 <Timer size={16} color="#ffffff" weight="fill" />
                             </article>
-                            <span>Fast and tracked delivery</span>
+                            <span className="text-sm">Fast and tracked delivery</span>
                         </div>
                     </div>
                     <div className="flex flex-col gap-5">
@@ -31,13 +31,13 @@ export default function Intro() {
                             <article className="h-8 w-8 flex items-center justify-center bg-baseText rounded-full">
                                 <Package size={16} color="#ffffff" weight="fill" />
                             </article>
-                            <span>Packaging keeps the coffee intact</span>
+                            <span className="text-sm">Packaging keeps the coffee intact</span>
                         </div>
                         <div className="flex items-center gap-3">
                             <article className="h-8 w-8 flex items-center justify-center bg-purpleMedium rounded-full">
                                 <Coffee size={16} color="#ffffff" weight="fill" />
                             </article>
-                            <span>Coffee arrives fresh to you</span>
+                            <span className="text-sm">Coffee arrives fresh to you</span>
                         </div>
 
                     </div>

@@ -17,6 +17,9 @@ module.exports = {
         baseTitle: "#272221",
         baseSubtitle: "#403937",
         baseText: "#574F4D",
+        baseCard: "#F3F2F2",
+        baseLabel: "#8D8686",
+        baseButton: "#E6E5E5",
       },
       fontFamily: {
         sans: 'var(--font-roboto)',
