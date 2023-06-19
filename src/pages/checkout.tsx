@@ -3,7 +3,9 @@ import 'tailwindcss/tailwind.css';
 
 import { MapPinLine, CurrencyDollar, CreditCard, Bank, Money, Minus, Plus, Trash } from 'phosphor-react'
 import CoffeTraditional from '../assets/png/Coffee.png'
+import CoffeImage5 from '../assets/png/Coffee5.png'
 import Image from "next/image";
+import ProductCart from "@/components/ProductCart";
 
 export default function Checkout() {
     return (
@@ -63,41 +65,33 @@ export default function Checkout() {
                         </div>
                     </div>
                 </div>
-                <aside className="flex flex-col gap-[15px]">
+                <aside className="flex flex-col gap-[15px] w-[36%]">
                     <h1 className="font-baloo font-bold text-lg text-baseSubtitle">
                         Selected coffees
                     </h1>
-                    <div className="bg-baseCard p-10 flex flex-col gap-8 rounded-md">
-                        <div className="flex ">
-                            <Image src={CoffeTraditional} alt="coffee" width={64} height={64} />
-                            <div>
-                                <h2>Express traditional</h2>
-                                <div className="flex">
-                                    <div className="flex items-center bg-baseButton gap-2 p-2 rounded-md">
-                                        <Minus size={14} color="#8047F8" weight="bold" className="cursor-pointer" />
-                                        <span>1</span>
-                                        <Plus size={14} color="#8047F8" weight="bold" className="cursor-pointer" />
-                                    </div>
-                                    <div>
-                                        <Trash size={22} color="#8047F8" weight="regular" />
-                                        <span>
-                                            Remove
-                                        </span>
-                                    </div>
+                    <div className="bg-baseCard p-10 flex flex-col rounded-md rounded-tl-md rounded-tr-[36px] rounded-br-md rounded-bl-[36px]">
+                        <ProductCart image={CoffeTraditional} title="Express traditional" value={9.90} />
+                        <div className="bg-baseButton h-[1px] w-full my-6"></div>
+                        <ProductCart image={CoffeImage5} title="Latte" value={19.90} />
+                        <div className="bg-baseButton h-[1px] w-full my-6"></div>
+                        <div className="flex flex-col gap-6">
+                            <div className="flex flex-col gap-3">
+                                <div className="flex justify-between items-center">
+                                    <span className="text-baseText text-sm">Total items</span>
+                                    <span className="text-baseText text-base font-bold">$ 29.7</span>
+                                </div>
+                                <div className="flex justify-between">
+                                    <span className="text-baseText text-sm">Delivery</span>
+                                    <span className="text-baseText text-base font-bold">$ 3.50</span>
+                                </div>
+                                <div className="flex justify-between">
+                                    <h1 className="text-baseSubtitle text-xl font-bold">Total</h1>
+                                    <h1 className="text-baseSubtitle text-xl font-bold">$ 33.2</h1>
                                 </div>
                             </div>
-                            <h1>$ 9,90</h1>
-                        </div>
-                        <div>
-
                             <div>
-                                <span></span>
-                                <div></div>
+                                <button className="bg-yellowmedium text-white text-sm font-bold uppercase w-full px-2 py-3 rounded-md">Confirm your order</button>
                             </div>
-                            <h1></h1>
-                        </div>
-                        <div>
-
                         </div>
                     </div>
                 </aside>
