@@ -51,16 +51,16 @@ export default function Checkout() {
                         <div className="flex gap-4">
                             <div className="w-1/3 relative flex items-center">
                                 <CreditCard size={22} color="#8047F8" weight="regular" className="absolute left-6" />
-                                <input className="p-3 bg-baseButton rounded h-11 text-center placeholder:text-sm uppercase" type="text" placeholder="Credit card" />
+                                <input className="p-3 bg-baseButton rounded h-11 text-center placeholder:text-sm uppercase focus:bg-purplelight focus:outline-purpleMedium" type="text" placeholder="Credit card" />
                             </div>
                             <div className="w-1/3 relative flex items-center">
                                 <Bank size={22} color="#8047F8" weight="regular" className="absolute left-6" />
-                                <input className="p-3 bg-baseButton rounded h-11 text-center placeholder:text-sm uppercase" type="text" placeholder="Debit card" />
+                                <input className="p-3 bg-baseButton rounded h-11 text-center placeholder:text-sm uppercase focus:bg-purplelight focus:outline-purpleMedium" type="text" placeholder="Debit card" />
                             </div>
 
                             <div className="w-1/3 relative flex items-center">
                                 <Money size={22} color="#8047F8" weight="regular" className="absolute left-6" />
-                                <input className="p-3 bg-baseButton rounded h-11 text-center placeholder:text-sm uppercase" type="text" placeholder="Money" />
+                                <input className="p-3 bg-baseButton rounded h-11 text-center placeholder:text-sm uppercase focus:bg-purplelight focus:outline-purpleMedium" type="text" placeholder="Money" />
                             </div>
                         </div>
                     </div>
