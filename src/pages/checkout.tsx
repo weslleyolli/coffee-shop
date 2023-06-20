@@ -6,6 +6,7 @@ import CoffeTraditional from '../assets/png/Coffee.png'
 import CoffeImage5 from '../assets/png/Coffee5.png'
 import Image from "next/image";
 import ProductCart from "@/components/ProductCart";
+import Link from "next/link";
 
 export default function Checkout() {
     return (
@@ -90,7 +91,7 @@ export default function Checkout() {
                                 </div>
                             </div>
                             <div>
-                                <button className="bg-yellowmedium text-white text-sm font-bold uppercase w-full px-2 py-3 rounded-md">Confirm your order</button>
+                                <Link href={'/sucess'} className="bg-yellowmedium text-white text-sm font-bold uppercase w-full px-2 py-3 rounded-md">Confirm your order</Link>
                             </div>
                         </div>
                     </div>

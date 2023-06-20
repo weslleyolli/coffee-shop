@@ -2,6 +2,8 @@
 import Image from "next/image"
 import { MapPin, ShoppingCart} from 'phosphor-react'
 import logoCoffe from '../assets/svgs/logoCoffee.svg'
+import Link from "next/link"
+
 
 
 export default function Header() {
@@ -13,9 +15,9 @@ export default function Header() {
                     <MapPin size={22} color="#8047F8" weight="fill" />
                     <span>Orlando, FL</span>
                 </button>
-                <button className="bg-yellowlight flex items-center p-2 rounded-md">
+                <Link href={'/checkout'} className="bg-yellowlight flex items-center p-2 rounded-md">
                     <ShoppingCart size={22} color="#C47F17" weight="fill" />
-                </button>
+                </Link>
             </div>
         </div>
     )
