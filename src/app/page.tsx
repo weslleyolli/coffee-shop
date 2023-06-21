@@ -34,7 +34,7 @@ export default function Home() {
         <div className=" absolute right-5 top-6 bg-yellowdark h-6 w-6 rounded-full flex items-center justify-center text-white">{totalAmount}</div>
       </div>
       <Intro />
-      <div className="mx-40 mb-10 flex flex-col gap-14">
+      <div className="mb-10 flex flex-col gap-14">
         <h1 className="text-5xl font-extrabold font-baloo text-baseTitle">Our coffee</h1>
         <div className="flex gap-24 flex-wrap">
           <Coffee
