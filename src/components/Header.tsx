@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image"
-import { MapPin, ShoppingCart} from 'phosphor-react'
+import { MapPin, ShoppingCart } from 'phosphor-react'
 import logoCoffe from '../assets/svgs/logoCoffee.svg'
 import Link from "next/link"
 

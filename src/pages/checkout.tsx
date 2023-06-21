@@ -4,7 +4,6 @@ import 'tailwindcss/tailwind.css';
 import { MapPinLine, CurrencyDollar, CreditCard, Bank, Money, Minus, Plus, Trash } from 'phosphor-react'
 import CoffeTraditional from '../assets/png/Coffee.png'
 import CoffeImage5 from '../assets/png/Coffee5.png'
-import Image from "next/image";
 import ProductCart from "@/components/ProductCart";
 import Link from "next/link";
 

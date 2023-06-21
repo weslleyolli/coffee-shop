@@ -1,6 +1,7 @@
 'use client'
 import Image from "next/image"
 import {Minus, Plus, ShoppingCart} from 'phosphor-react'
+import { useEffect, useState } from "react";
 
 interface CoffeProps {
     image: string;
@@ -10,9 +11,26 @@ interface CoffeProps {
     props2: string;
     props3: string;
     isActive: boolean;
+    handleAmountChange: HandleAmountChange;
 }
 
-export default function Coffee({image, name, content, props1, props2, props3, isActive}: CoffeProps){
+type HandleAmountChange = (amount: number) => void;
+
+export default function Coffee({image, name, content, props1, props2, props3, isActive, handleAmountChange}: CoffeProps){
+    const [amount, setAmount] = useState(0)
+
+    const increment = () => {
+        setAmount(amount + 1)
+        handleAmountChange(1);
+    }
+
+    const decrease = () => {
+        if (amount > 0) {
+            setAmount(amount - 1)
+            handleAmountChange(-1);
+        }
+    }
+
     const isActiveProps2 = props2 && props3;
     return (
         <div className="bg-baseCard w-[19%] flex flex-col items-center gap-5 relative px-8 rounded-tl-md rounded-tr-[36px] rounded-br-md rounded-bl-[36px]">
@@ -36,9 +54,9 @@ export default function Coffee({image, name, content, props1, props2, props3, is
                 </article>
                 <div className="flex gap-2">
                     <div className="flex items-center bg-baseButton gap-2 p-2 rounded-md">
-                        <Minus size={14} color="#8047F8" weight="bold" className="cursor-pointer" />
-                        <span>1</span>
-                        <Plus size={14} color="#8047F8" weight="bold" className="cursor-pointer" />
+                        <Minus size={14} color="#8047F8" weight="bold" className="cursor-pointer" onClick={decrease} />
+                        <span>{amount}</span>
+                        <Plus size={14} color="#8047F8" weight="bold" className="cursor-pointer" onClick={increment} />
                     </div>
                     <button className="bg-purpledark flex items-center p-2 rounded-md">
                         <ShoppingCart size={22} color="#ffffff" weight="fill" />
