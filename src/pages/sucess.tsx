@@ -1,11 +1,30 @@
+import React, { useEffect, useState } from 'react';
 import Header from "@/components/Header";
 import Image from "next/image";
 import 'tailwindcss/tailwind.css';
-import { Timer, MapPin, CurrencyDollar } from 'phosphor-react'
+import { Timer, MapPin, CurrencyDollar } from 'phosphor-react';
 
-import illustration from '../assets/png/Illustration.png'
+import illustration from '../assets/png/Illustration.png';
 
 export default function Sucess() {
+    const [orderData, setOrderData] = useState({
+        cep: '',
+        street: '',
+        number: '',
+        complement: '',
+        name: '',
+        city: '',
+        uf: '',
+        paymentMethod: ''
+    });
+
+    useEffect(() => {
+        const storedOrderData = localStorage.getItem('checkoutForm');
+        if (storedOrderData) {
+            setOrderData(JSON.parse(storedOrderData));
+        }
+    }, []);
+
     return (
         <div className="px-40 h-screen w-full">
             <Header />
@@ -23,8 +42,8 @@ export default function Sucess() {
                                     <MapPin size={16} color="#ffffff" weight="fill" />
                                 </div>
                                 <div className="flex flex-col text-baseText">
-                                    <span className="">Delivery at <strong className="font-bold">Rua João Daniel Martinelli, 102</strong></span>
-                                    <span>Farrapos - Porto Alegre, RS</span>
+                                    <span>Delivery at <strong className="font-bold">{`${orderData.street}, ${orderData.number}`}</strong></span>
+                                    <span>{`${orderData.name} - ${orderData.city}, ${orderData.uf}`}</span>
                                 </div>
                             </div>
                             <div className="flex gap-3 items-center">
@@ -42,17 +61,17 @@ export default function Sucess() {
                                 </div>
 
                                 <div className="flex flex-col text-baseText">
-                                    <span>payment on delivery</span>
-                                    <span><strong>Credit card</strong></span>
+                                    <span>Payment on delivery</span>
+                                    <span><strong>{orderData.paymentMethod}</strong></span>
                                 </div>
                             </div>
                         </div>
                         <div className="mr-10">
-                            <Image src={illustration} alt=""  />
+                            <Image src={illustration} alt="" />
                         </div>
                     </div>
                 </div>
             </main>
         </div>
-    )
+    );
 }
