@@ -1,34 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">Coffee shop</h1>
+<p align="center">
+  <img src="https://img.shields.io/static/v1?label=Taught%20by&message=Weslley&color=white&labelColor=8257E5" alt="Taught by Weslley">
+  <img src="https://img.shields.io/github/forks/weslleyolli/coffee-shop?label=forks&message=MIT&color=white&labelColor=8257E5" alt="Forks">
+  <img src="https://img.shields.io/github/stars/weslleyolli/coffee-shop?label=stars&message=MIT&color=white&labelColor=8257E5" alt="Stars">
+</p>
+<p align="center">
+    <img src="public/CoffeShop.png" alt="Preview">
+</p>
 
-## Getting Started
+<br>
+<br>
 
-First, run the development server:
+## 🧪 Technologies
+
+This project was developed using the following technologies:
+
+- [NodeJS](https://nodejs.org/)
+- [NextJS](https://nextjs.dev/)
+- [ReactJS](https://reactjs.org/)
+- [JavaScript](https://js.org/)
+- [TypeScript](https://typescript.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+  
+  ## 🚀 Getting started
+Clone the project and access the folder.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+$ https://github.com/weslleyolli/coffee-shop
+$ cd coffee-shop
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Follow the steps below:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Web
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+# Install the web dependencies
+$ npm install
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Start the web project
+$ npm run dev
