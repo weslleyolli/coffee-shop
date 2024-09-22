@@ -83,7 +83,7 @@ const AddressForm: React.FC<AddressFormProps> = ({ formData, setFormData }) => {
           <input
             className="p-3 bg-baseButton rounded h-11 w-1/3 placeholder:text-sm"
             type="text"
-            placeholder="Name"
+            placeholder="street"
             name="name"
             value={formData.name}
             onChange={handleInputChange}
