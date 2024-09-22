@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import Coffee from "@/components/Coffee";
 import Header from "@/components/Header";
 import Intro from "@/components/Intro";
-import SelectedCoffee from "../components/SelectedCoffee";
 import { coffeeData } from './dataCoffee';
 
 export default function Home() {
@@ -33,15 +32,22 @@ export default function Home() {
   };
 
   return (
-    <div className="mx-40">
+    <div className="mx-5 lg:mx-32">
       <div className="relative">
         <Header />
-        <div className="absolute right-5 top-6 bg-yellowdark h-6 w-6 rounded-full flex items-center justify-center text-white">{totalAmount}</div>
+        <div className="absolute right-5 top-6 bg-yellowdark h-6 w-6 rounded-full flex items-center justify-center text-white">
+          {totalAmount}
+        </div>
       </div>
+
+      {/* Intro Section */}
       <Intro />
-      <div className="mb-10 flex flex-col gap-14">
-        <h1 className="text-5xl font-extrabold font-baloo text-baseTitle">Our coffee</h1>
-        <div className="flex gap-24 flex-wrap">
+
+      <div className="mb-10 flex flex-col gap-10 lg:gap-14 items-center">
+        <h1 className="text-3xl lg:text-5xl font-extrabold font-baloo text-baseTitle text-center lg:text-left">
+          Our coffee
+        </h1>
+        <div className="flex gap-6 lg:gap-12 flex-wrap">
           {coffeeData.map((coffee, index) => (
             <Coffee
               key={index}

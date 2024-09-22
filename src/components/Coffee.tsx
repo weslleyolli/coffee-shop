@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 interface CoffeeProps {
     image: StaticImageData;
-    name: string; 
+    name: string;
     content: string;
     price: number;
     props1: string;
@@ -49,7 +49,7 @@ export default function Coffee({ image, name, content, price, props1, props2, pr
     };
 
     return (
-        <div className="bg-baseCard w-[18%] flex flex-col items-center justify-between px-8 rounded-tl-md rounded-tr-[36px] rounded-br-md rounded-bl-[36px]">
+        <div className="bg-baseCard w-full sm:w-[48%] md:w-[30%] lg:w-[28%] flex flex-col items-center justify-between px-4 py-6 rounded-tl-md rounded-tr-[36px] rounded-br-md rounded-bl-[36px] mb-6">
             <div className="flex flex-col items-center gap-5">
                 <Image className="mt-[-1.5rem]" src={image} alt="Coffee" />
                 <div className="flex items-center gap-2">
@@ -66,17 +66,20 @@ export default function Coffee({ image, name, content, price, props1, props2, pr
                 <h1 className="font-baloo text-baseSubtitle text-lg text-center">{name}</h1>
                 <span className="text-baseLabel text-sm text-center">{content}</span>
             </div>
-            <div className="flex w-full items-center mr-8 justify-between mb-5 gap-2">
-                <article className="flex items-center gap-1">
-                    <span className="text-sm text-baseText">R$</span>
-                    <h1 className="font-baloo font-extrabold text-xl text-baseText whitespace-nowrap">{price.toFixed(2)}</h1>
-                </article>
-                <div className="flex items-center gap-2 w-full">
+            <div className="flex w-full items-center justify-around mb-5 mt-5 lg:mt-3 gap-2">
+                <article className="flex items-center gap-3">
+                    <div className="flex items-center gap-1">
+                        <span className="text-sm text-baseText">R$</span>
+                        <h1 className="font-baloo font-extrabold text-xl text-baseText whitespace-nowrap">{price.toFixed(2)}</h1>
+                    </div>
                     <div className="flex items-center bg-baseButton gap-2 p-2 rounded-md">
                         <Minus size={14} color="#8047F8" weight="bold" className="cursor-pointer" onClick={decrease} />
                         <span>{amount}</span>
                         <Plus size={14} color="#8047F8" weight="bold" className="cursor-pointer" onClick={increment} />
                     </div>
+                </article>
+                <div className="flex items-center gap-2">
+
                     <button className="bg-purpledark flex items-center p-2 rounded-md ml-auto" onClick={addToCart}>
                         <ShoppingCart size={20} color="#ffffff" weight="fill" />
                     </button>

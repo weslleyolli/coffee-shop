@@ -8,7 +8,7 @@ import Link from "next/link"
 
 export default function Header() {
     return (
-        <div className="p-8 flex items-center justify-between">
+        <div className="p-8 z-50 flex items-center justify-between">
             <Link href={'/'}>
                 <Image src={logoCoffe} alt=""/>
             </Link>

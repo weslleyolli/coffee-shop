@@ -1,13 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import { coffeeData } from '../app/dataCoffee';
+import Summary from './Summary';
+import ProductCart from './ProductCart';
+import CoffeImage from '../assets/png/Coffee.png';
+import { useRouter } from 'next/router';
 
 interface CoffeeSelection {
   [key: string]: number;
 }
 
-function SelectedCoffees() {
+interface SelectedCoffeeProps {
+  formData: {
+    cep: string;
+    street: string;
+    number: string;
+    complement: string;
+    name: string;
+    city: string;
+    uf: string;
+    paymentMethod: string;
+  };
+}
+
+export function SelectedCoffee({ formData }: SelectedCoffeeProps) {
   const [selectedCoffees, setSelectedCoffees] = useState<CoffeeSelection>({});
   const [totalPrice, setTotalPrice] = useState<number>(0);
+  const router = useRouter();
 
   useEffect(() => {
     const coffeesString = localStorage.getItem('selectedCoffees');
@@ -24,19 +42,57 @@ function SelectedCoffees() {
     setTotalPrice(parseFloat(total.toFixed(2)));
   }, []);
 
+  const handleConfirmOrder = () => {
+    const { cep, street, number, name, city, uf, paymentMethod } = formData;
+
+    // Exibindo o formData no console para verificar se os dados estão corretos
+    console.log("FormData:", formData);
+
+    // Verifica se algum dos campos obrigatórios está vazio
+    if (!cep || !street || !number || !name || !city || !uf || !paymentMethod) {
+        alert('Please fill out all fields and select a payment method.');
+        return;
+    }
+
+    // Exibindo uma mensagem de sucesso caso todos os campos estejam preenchidos
+    console.log("All fields are filled. Proceeding with order confirmation...");
+
+    // Se tudo estiver preenchido, continua com a confirmação
+    localStorage.setItem('checkoutForm', JSON.stringify(formData));
+    localStorage.removeItem('selectedCoffees');
+    router.push('/sucess');
+  };
+
   return (
-    <div className="selected-coffees">
-      <h2>Selected Coffees</h2>
-      <ul>
-        {Object.entries(selectedCoffees).map(([name, qty]) => (
-          <li key={name}>
-            {name}: {qty}
-          </li>
-        ))}
-      </ul>
-      <p>Total Price: R$ {totalPrice.toFixed(2)}</p>
-    </div>
+    <aside className="flex flex-col gap-[15px] w-full md:w-[36%]">
+      <h1 className="font-baloo font-bold text-lg text-baseSubtitle">Selected coffees</h1>
+      <div className="bg-baseCard p-10 flex flex-col rounded-md rounded-tl-md rounded-tr-[36px] rounded-br-md rounded-bl-[36px]">
+        {Object.entries(selectedCoffees).map(([name, qty], index) => {
+          const coffee = coffeeData.find((coffee) => coffee.name === name);
+          return (
+            <div key={index}>
+              <ProductCart
+                image={coffee?.image ?? CoffeImage} // Valor padrão para imagem
+                title={name}
+                value={coffee?.price ?? 0} // Valor padrão para preço
+                quantity={qty}
+                handleAmountChange={(newAmount) => {
+                  // Função que será chamada ao mudar a quantidade
+                  console.log("Nova quantidade:", newAmount);
+                }}
+              />
+              <div className="bg-baseButton h-[1px] w-full my-6"></div>
+            </div>
+          );
+        })}
+        <Summary totalPrice={totalPrice} />
+        <button
+          className="bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-bold uppercase px-4 py-3 mt-3 rounded-md transition-colors duration-300"
+          onClick={handleConfirmOrder}
+        >
+          Confirm your order
+        </button>
+      </div>
+    </aside>
   );
 }
-
-export default SelectedCoffees;
