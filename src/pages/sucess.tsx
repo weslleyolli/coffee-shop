@@ -33,7 +33,6 @@ export default function Sucess() {
                     <h1 className="text-yellowdark font-baloo font-extrabold text-2xl lg:text-4xl">Huh! confirmed order</h1>
                     <h2 className="text-baseSubtitle text-lg lg:text-xl">Now just wait for the coffee to come to you soon</h2>
                 </div>
-
                 <div className="flex flex-col lg:flex-row justify-between items-center w-full gap-8 lg:gap-0">
                     <div className="w-full lg:w-2/5 flex flex-col gap-8 p-8 md:p-10 border border-purpleMedium rounded-md rounded-tl-md rounded-tr-[36px] rounded-br-md rounded-bl-[36px]">
                         <div className="flex gap-3 items-center">
@@ -58,7 +57,6 @@ export default function Sucess() {
                             <div className="h-8 w-8 flex items-center justify-center bg-yellowdark rounded-full">
                                 <CurrencyDollar size={16} color="#ffffff" weight="regular" />
                             </div>
-
                             <div className="flex flex-col text-baseText">
                                 <span>Payment on delivery</span>
                                 <span><strong>{orderData.paymentMethod}</strong></span>

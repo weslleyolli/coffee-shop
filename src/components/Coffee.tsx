@@ -79,7 +79,6 @@ export default function Coffee({ image, name, content, price, props1, props2, pr
                     </div>
                 </article>
                 <div className="flex items-center gap-2">
-
                     <button className="bg-purpledark flex items-center p-2 rounded-md ml-auto" onClick={addToCart}>
                         <ShoppingCart size={20} color="#ffffff" weight="fill" />
                     </button>

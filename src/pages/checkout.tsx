@@ -43,13 +43,9 @@ export default function Checkout() {
             <section className="flex flex-col md:flex-row w-full pt-10 gap-8">
                 <div className="flex flex-col w-full md:w-3/5 gap-6">
                     <h1 className="font-baloo font-bold text-lg text-baseSubtitle">Complete your order</h1>
-
-                    {/* Passando setFormData junto com formData */}
                     <AddressForm formData={formData} setFormData={setFormData} />
                     <PaymentForm formData={formData} setFormData={setFormData} />
                 </div>
-
-                {/* Certifique-se de passar formData para o SelectedCoffee */}
                 <SelectedCoffee formData={formData} />
             </section>
         </main>

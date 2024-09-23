@@ -15,7 +15,6 @@ export default function Intro() {
                         With Coffee Delivery you get your coffee wherever you are, anytime.
                     </p>
                 </div>
-
                 <div className="flex flex-col lg:flex-row mt-8 lg:mt-16 gap-8 lg:gap-12">
                     <div className="flex flex-col gap-5">
                         <div className="flex items-center gap-3">
@@ -31,7 +30,6 @@ export default function Intro() {
                             <span className="text-sm sm:text-base">Fast and tracked delivery</span>
                         </div>
                     </div>
-
                     <div className="flex flex-col gap-5">
                         <div className="flex items-center gap-3">
                             <article className="h-8 w-8 flex items-center justify-center bg-baseText rounded-full">
@@ -48,7 +46,6 @@ export default function Intro() {
                     </div>
                 </div>
             </div>
-
             <div className="mt-8 lg:mt-0 w-full lg:w-1/2 flex justify-center">
                 <Image src={introImage} alt="Coffee Image" className="max-w-full h-auto" />
             </div>

@@ -21,7 +21,7 @@ const PaymentForm: React.FC<PaymentFormProps> = ({ formData, setFormData }) => {
     const handlePaymentMethodChange = (method: string) => {
         setFormData((prevState) => ({
             ...prevState,
-            paymentMethod: method,  // Atualiza corretamente o método de pagamento
+            paymentMethod: method,
         }));
     };
 
@@ -57,14 +57,12 @@ const PaymentForm: React.FC<PaymentFormProps> = ({ formData, setFormData }) => {
     </div>
   );
 };
-
 interface PaymentOptionProps {
   placeholder: string;
   icon: React.ReactNode;
   onClick: () => void;
   selected: boolean;
 }
-
 const PaymentOption: React.FC<PaymentOptionProps> = ({ placeholder, icon, onClick, selected }) => (
   <button
     className={`w-full flex items-center justify-center py-3 rounded-md cursor-pointer 

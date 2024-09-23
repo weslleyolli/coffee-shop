@@ -44,20 +44,13 @@ export function SelectedCoffee({ formData }: SelectedCoffeeProps) {
 
   const handleConfirmOrder = () => {
     const { cep, street, number, name, city, uf, paymentMethod } = formData;
-
-    // Exibindo o formData no console para verificar se os dados estão corretos
     console.log("FormData:", formData);
-
-    // Verifica se algum dos campos obrigatórios está vazio
     if (!cep || !street || !number || !name || !city || !uf || !paymentMethod) {
         alert('Please fill out all fields and select a payment method.');
         return;
     }
-
-    // Exibindo uma mensagem de sucesso caso todos os campos estejam preenchidos
     console.log("All fields are filled. Proceeding with order confirmation...");
 
-    // Se tudo estiver preenchido, continua com a confirmação
     localStorage.setItem('checkoutForm', JSON.stringify(formData));
     localStorage.removeItem('selectedCoffees');
     router.push('/sucess');
@@ -72,12 +65,11 @@ export function SelectedCoffee({ formData }: SelectedCoffeeProps) {
           return (
             <div key={index}>
               <ProductCart
-                image={coffee?.image ?? CoffeImage} // Valor padrão para imagem
+                image={coffee?.image ?? CoffeImage}
                 title={name}
-                value={coffee?.price ?? 0} // Valor padrão para preço
+                value={coffee?.price ?? 0}
                 quantity={qty}
                 handleAmountChange={(newAmount) => {
-                  // Função que será chamada ao mudar a quantidade
                   console.log("Nova quantidade:", newAmount);
                 }}
               />

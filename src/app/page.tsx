@@ -39,10 +39,7 @@ export default function Home() {
           {totalAmount}
         </div>
       </div>
-
-      {/* Intro Section */}
       <Intro />
-
       <div className="mb-10 flex flex-col gap-10 lg:gap-14 items-center">
         <h1 className="text-3xl lg:text-5xl font-extrabold font-baloo text-baseTitle text-center lg:text-left">
           Our coffee
